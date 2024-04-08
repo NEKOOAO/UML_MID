@@ -20,14 +20,10 @@ public class create_mode_usecase extends create_mode {
 
     @Override
     public void activate() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'activate'");
-    }
+  }
 
     @Override
     public void deactivate() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deactivate'");
-    }
+   }
     
 }

@@ -1,5 +1,6 @@
 package window;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Panel;
 import java.util.ArrayList;
@@ -12,9 +13,10 @@ import window.buttons.button;
 
 public class button_group {
     Panel button_panel;
-    ArrayList<JButton> button_list;
+    ArrayList<button> button_list;
     public mode_controller mode_controller;
     mode_list now_mode;
+    button nowButton;
     public button_group(){
         create_button();
         button_panel = new Panel();
@@ -23,6 +25,8 @@ public class button_group {
             button_panel.add(jButton);
         }
         now_mode = mode_list.select_mode;
+        nowButton = button_list.get(0);
+        nowButton.setBackground(Color.white);
     }
     public Panel get_penel(){
         return button_panel;
@@ -36,11 +40,12 @@ public class button_group {
         button_list.add(new button( mode_list.line_mode_comp,this,"src\\window\\buttons\\image\\com.PNG"));
         button_list.add(new button( mode_list.line_mode_gen,this,"src\\window\\buttons\\image\\gen.PNG"));
     }
-    public void push_button(mode_list to_mode){
+    public void push_button(mode_list to_mode,button tobutton){
         if(now_mode!=to_mode){
+            nowButton.unselect();
+            nowButton = tobutton;
             now_mode = to_mode;
             mode_controller.change_mode(to_mode);
-            System.out.println(to_mode.name());
         }
     }
 }

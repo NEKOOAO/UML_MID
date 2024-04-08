@@ -1,7 +1,6 @@
 package window;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.util.ArrayList;
@@ -12,7 +11,6 @@ import javax.swing.JPanel;
 import shape.Group_obj;
 import shape.baseline;
 import shape.block_object;
-import shape.class_object;
 import shape.draw_obj;
 import shape.line_factory;
 import shape.lines;
@@ -107,9 +105,6 @@ public class canva extends JPanel{
         repaint();
     }
     public void move_object(Point start,Point end){
-        draw_obj obj_start = null;
-        
-        Point move_vec = new Point(-start.x+end.x, -start.y+end.y);
         if(now_mov_obj==null){
             now_mov_obj = find_object(start);
             if(now_mov_obj!=null)offset = new Point(end.x-now_mov_obj.pt.x,end.y-now_mov_obj.pt.y );

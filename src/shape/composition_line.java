@@ -2,7 +2,6 @@ package shape;
 
 import java.awt.Graphics;
 import java.awt.Point;
-import java.util.ArrayList;
 
 public class composition_line extends baseline{
 

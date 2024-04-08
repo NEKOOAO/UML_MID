@@ -30,6 +30,7 @@ public class select_mode extends Basemode {
 
     @Override
     public void deactivate() {
+        canva.de_select_obj();
    }
 
 }

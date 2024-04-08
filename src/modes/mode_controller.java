@@ -10,11 +10,11 @@ public class mode_controller {
     int now_mode_id;
     canva canva;
     public mode_controller(){
-        change_mode(mode_list.select_mode);
     }
     public void init(canva canva){
         this.canva = canva;
         create_mode();
+        change_mode(mode_list.select_mode);
     }
     private void create_mode(){
         mode_array .add(new create_mode_class(canva));
@@ -25,6 +25,7 @@ public class mode_controller {
         mode_array .add(new line_mode_gen(canva));
     }
     public void change_mode(mode_list to_mode){
+        mode_array.get(now_mode_id).deactivate();
         now_mode_id = to_mode.ordinal();
     }
     public void click(Point now){

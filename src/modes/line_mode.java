@@ -2,7 +2,6 @@ package modes;
 
 import java.awt.Point;
 
-import shape.lines;
 import window.canva;
 
 public abstract class line_mode extends Basemode  {

@@ -21,14 +21,10 @@ public class create_mode extends Basemode {
 
     @Override
     public void activate() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'activate'");
-    }
+   }
 
     @Override
     public void deactivate() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deactivate'");
-    }
+   }
     
 }
