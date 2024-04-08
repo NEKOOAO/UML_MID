@@ -43,8 +43,8 @@ public class canva extends JPanel{
     public void paint(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.BLACK);
-        for (move_object obj : draw_object_arr) {
-            if(obj.controlable)obj.draw(g);
+        for (int i =  draw_object_arr.size()-1; i >=0; i--) {
+            if(draw_object_arr.get(i).controlable)draw_object_arr.get(i).draw(g);   
         }
         for (baseline line : line_arr) {
             line.draw(g);

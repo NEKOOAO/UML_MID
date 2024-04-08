@@ -36,13 +36,6 @@ public abstract class block_object extends draw_obj {
                 now_port.draw(g);
             }
         }
-        else{
-            for (int i = 0; i < port_activate.length; i++) {
-                if(port_activate[i]){
-                    ports[i].draw(g);
-                }
-            }
-        }
     }
 
 
