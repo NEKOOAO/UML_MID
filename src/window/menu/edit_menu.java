@@ -1,7 +1,5 @@
 package window.menu;
 
-import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -15,7 +13,6 @@ public class edit_menu extends JMenu{
     
     public edit_menu(window.canva canva){
         super("edit");
-        //setFont(new Font("Courier New", Font.BOLD, 15));
         opt_list = new ArrayList<>();
         create_item();
         this.canva = canva;
